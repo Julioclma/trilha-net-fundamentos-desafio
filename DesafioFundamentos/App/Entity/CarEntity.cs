@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace DesafioFundamentos.App.Entity
 {
-    public class CarEntity(string Name)
+    public class CarEntity(string Placa)
     {
-        private string Name { get; } = Name;
+        public string Placa { get; } = Placa;
+        public bool FlagActive { get; } = true;
     }
 }
