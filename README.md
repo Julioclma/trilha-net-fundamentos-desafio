@@ -35,4 +35,10 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+Nesse caso, mudei um pouco o desafio, e implementei novas funcionalidades como:
+
+- Registro de Saída de Veículo
+- Listar informações do estacionamento
+- Sistema de Vendas, em conjunto com o registro de Saída dos veículos
+
+Obs: Está faltando algumas validações, então, se for testar, faça os cadastros antes de fazer as listagem.
