@@ -32,5 +32,12 @@ namespace DesafioFundamentos.App.Service
             // remove veiculo
             return this.CarRepository.All();
         }
+
+        public CarEntity FindByPlaca(string placa)
+        {
+            return this.CarRepository.FindByPlaca(placa);
+        }
+        
+
     }
 }

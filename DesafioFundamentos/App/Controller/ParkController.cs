@@ -36,11 +36,20 @@ namespace DesafioFundamentos.App.Controller
             return this.CarService.All();
         }
 
-        public void Sale(CarEntity carEntity, int hour)
+        public void Sale(string placa, int hour)
         {
-            // lista todos veiculo
-             this.SaleService.Sale(carEntity, hour);
+            // pesquisa veículo
+            CarEntity carEntity = this.CarService.FindByPlaca(placa);
+            this.SaleService.Sale(carEntity, hour);
         }
-        
+
+        public string Sales()
+        {
+            // Lista Vendas
+            return this.SaleService.All();
+        }
+
+
+
     }
 }

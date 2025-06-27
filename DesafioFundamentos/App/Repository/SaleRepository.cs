@@ -19,5 +19,15 @@ namespace DesafioFundamentos.App.Repository
             System.Console.WriteLine("Venda cadastrada com sucesso!");
             this.saleEntities.Add(saleEntity);
         }
+
+        public string All()
+        {
+            string info = "**Vendas**\n";
+            foreach (SaleEntity sale in this.saleEntities)
+            {
+                info += $"Placa: {sale.CarEntity.Placa}\n";
+            }
+            return info;
+        }
     }
 }

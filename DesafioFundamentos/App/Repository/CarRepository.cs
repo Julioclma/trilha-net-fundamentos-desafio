@@ -34,5 +34,10 @@ namespace DesafioFundamentos.App.Repository
             }
             return info;
         }
+
+        public CarEntity FindByPlaca(string placa)
+        {
+            return this.Cars.Find(car => car.Placa.Contains(placa));
+        }
     }
 }

@@ -34,27 +34,33 @@ namespace DesafioFundamentos.App.Menu
         }
         private void Options()
         {
-            System.Console.WriteLine("1 - Cadastrar Veículo\n2 - Remover Veículo\n3 - Listar Veículos\n4 - Ver informações do Estacionamento\n5 - Encerrar");
+            System.Console.WriteLine("1 - Cadastrar Veículo\n2 - Registrar Saída\n3 - Listar Veículos\n4 - Ver informações do Estacionamento\n5 - Visualizar Vendas Realizadas\n6 - Encerrar");
             string option = Console.ReadLine();
 
             switch (option)
             {
                 case "1":
-                    System.Console.WriteLine("Insira a placa do veículo");
+                    Console.WriteLine("Insira a placa do veículo");
                     this.ParkController.Add(Console.ReadLine());
                     break;
-                case "1":
-                    System.Console.WriteLine("Insira a placa do veículo");
-                    this.ParkController.Add(Console.ReadLine());
+                case "2":
+                    Console.WriteLine("Insira a placa do veículo");
+                    string placa = Console.ReadLine();
+                    Console.WriteLine("Insira o tempo de permanência em horas");
+                    int horas = Convert.ToInt32(Console.ReadLine());
+                    this.ParkController.Sale(placa, horas);
                     break;
                 case "3":
                     Console.Clear();
-                    System.Console.WriteLine(this.ParkController.All());
+                    Console.WriteLine(this.ParkController.All());
                     break;
                 case "4":
                     Console.WriteLine(this.ParkEntity.Info());
                     break;
                 case "5":
+                    Console.WriteLine(this.ParkController.Sales());
+                    break;
+                case "6":
                     this.Program = false;
                     Console.Clear();
                     Console.WriteLine("Programa Encerrado com sucesso!");

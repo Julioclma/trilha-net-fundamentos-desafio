@@ -20,5 +20,12 @@ namespace DesafioFundamentos.App.Service
 
             this.SaleRepository.Add(saleEntity);
         }
+
+        public string All()
+        {
+            // remove veiculo
+            return this.SaleRepository.All();
+        }
+
     }
 }
